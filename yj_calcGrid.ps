@@ -1,0 +1,64 @@
+function Get-yj_calcGrid {
+    param (
+        [Parameter(Mandatory=$true)]
+        [int]$Rows,
+
+        [Parameter(Mandatory=$true)]
+        [int]$Cols,
+
+        [Parameter(Mandatory=$true)]
+        [System.Collections.Generic.HashSet[System.Tuple[int,int]]]$LiveCells
+    )
+
+    $directions = @(
+        [Tuple]::Create(-1, -1), [Tuple]::Create(-1, 0), [Tuple]::Create(-1, 1),
+        [Tuple]::Create(0, -1),                        [Tuple]::Create(0, 1),
+        [Tuple]::Create(1, -1), [Tuple]::Create(1, 0), [Tuple]::Create(1, 1)
+    )
+
+    $newLiveCells = New-Object System.Collections.Generic.HashSet[System.Tuple[int,int]]
+
+    foreach ($cell in $LiveCells) {
+        $liveneighbourss = 0
+        foreach ($direction in $directions) {
+            $neighbours = [Tuple]::Create($cell.Item1 + $direction.Item1, $cell.Item2 + $direction.Item2)
+            if ($LiveCells.Contains($neighbours)) {
+                $liveneighbourss++
+            }
+        }
+
+        if ($liveneighbourss -eq 2 -or $liveneighbourss -eq 3) {
+            $newLiveCells.Add($cell)
+        }
+
+        foreach ($direction in $directions) {
+            $neighbours = [Tuple]::Create($cell.Item1 + $direction.Item1, $cell.Item2 + $direction.Item2)
+            if (-not $LiveCells.Contains($neighbours)) {
+                $neighboursLiveneighbourss = 0
+                foreach ($direction2 in $directions) {
+                    $neighboursneighbours = [Tuple]::Create($neighbours.Item1 + $direction2.Item1, $neighbours.Item2 + $direction2.Item2)
+                    if ($LiveCells.Contains($neighboursneighbours)) {
+                        $neighboursLiveneighbourss++
+                    }
+                }
+                if ($neighboursLiveneighbourss -eq 3) {
+                    $newLiveCells.Add($neighbours)
+                }
+            }
+        }
+    }
+
+    return ,$newLiveCells
+}
+
+<# # Example Usage
+$Rows = 5
+$Cols = 5
+$LiveCells = [System.Collections.Generic.HashSet[System.Tuple[int,int]]]::new()
+$LiveCells.Add([Tuple]::Create(1, 2))
+$LiveCells.Add([Tuple]::Create(2, 2))
+$LiveCells.Add([Tuple]::Create(3, 2))
+
+$NextGenLiveCells = Get-yj_calcGrid -Rows $Rows -Cols $Cols -LiveCells $LiveCells
+$NextGenLiveCells
+#>
