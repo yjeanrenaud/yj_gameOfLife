@@ -18,8 +18,7 @@ fun yj_calcGrid(liveCells: Set<Pair<Int, Int>>): Set<Pair<Int, Int>> {
         count == 3 || (count == 2 && cell in liveCells)
     }.keys.toSet()
 }
-/*
-// example usage:
+/* // example usage:
 fun main() {
     val initialLiveCells = setOf(Pair(1, 2), Pair(2, 2), Pair(3, 2))
     val nextGenLiveCells = yj_calcGrid(initialLiveCells)
