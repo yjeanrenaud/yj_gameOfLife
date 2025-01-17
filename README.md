@@ -1,7 +1,7 @@
 # yj_gameOfLife
 A repo to collect implentations of [John Horton Conway's cellular automaton Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) in various programming languages.
 
-Fhe function `yj_calcGrid` always expects the grid size and the coordinates of the cells currently alive. It then returns the cells alive after one iteration.
+The function `yj_calcGrid` always expects the grid size and the coordinates of the cells currently alive. It then returns the cells alive after one iteration.
 Use this a starting point to build a drawing or output function to display the game's content evolving.
 
 So far, there are the following languages supported here:
