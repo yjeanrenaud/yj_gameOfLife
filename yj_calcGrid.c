@@ -1,3 +1,9 @@
+/*
+ * C function for the Game of Life
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2025, Yves Jeanrenaud
+*/
+
 #define MAX_ROWS 100
 #define MAX_COLS 100 // use malloc for larger grids
 
