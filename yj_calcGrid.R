@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 ##
 # R function for the Game of Life
 # https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
