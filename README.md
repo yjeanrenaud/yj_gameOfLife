@@ -7,7 +7,7 @@ Use this a starting point to build a drawing or output function to display the g
 So far, there are the following languages supported here:
 - R: [yj_calcGrid.R](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.R)
 - Java: [yj_calcGrid.Java](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.Java)
-- JavaScript: [yj_calcGrid.js](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.js)
+- JavaScript: [yj_calcGrid.js](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.js) with an example to execute: [gameOfLife-example.html](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/gameOfLife-example.html)
 - MATHLAB: [yj_calcGrid.m](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.m)
 - PHP: [yj_calcGrid.php](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.php)
 - Python: [yj_calcGrid.py](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.py) with an example to execute: [gameOfLife-example.py](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/gameOfLife-example.py)
