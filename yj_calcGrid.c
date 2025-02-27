@@ -1,7 +1,7 @@
 /*
  * C function for the Game of Life
  * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
- * 2025, Yves Jeanrenaud
+ * 2024, Yves Jeanrenaud
  */
 
 #define MAX_ROWS 100
