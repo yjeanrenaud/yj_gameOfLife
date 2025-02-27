@@ -1,3 +1,7 @@
+% MATHLAB function for the Game of Life using malloc.
+% https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+% 2024, Yves Jeanrenaud
+
 function nextGrid = yj_calcGrid(rows, cols, initialGrid)
     % Extend the grid with a border to simplify neighbour calculations
     extendedGrid = zeros(rows+2, cols+2);
