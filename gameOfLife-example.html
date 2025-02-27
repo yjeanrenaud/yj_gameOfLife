@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game of Life Example</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+<p><pre>Game of Life Example<br/>
+javascript/html sample on how to use the yj_calcGrid function.<br/>
+2025, Yves Jeanrenaud</pre></p>
+  <!-- Canvas for drawing the Game of Life grid -->
+  <canvas id="gameCanvas"></canvas>
+  <script src="yj_calcGrid.js"></script>
+  
+  <script>
+    window.onload = function() {
+      // Grid parameters
+      const gridSize = [50, 50]; // [rows, columns]
+      const cellSize = 10;       // Pixel size for each cell
+
+      // Set up the canvas dimensions
+      const canvas = document.getElementById('gameCanvas');
+      canvas.width = gridSize[1] * cellSize;
+      canvas.height = gridSize[0] * cellSize;
+      const ctx = canvas.getContext('2d');
+
+      // Colors
+      const WHITE = "#FFFFFF";
+      const BLACK = "#000000";
+
+      // Initial live cells pattern (glider)
+      // Note: The first value is the row (y) and the second is the column (x)
+      let currentLiveCells = [
+        [1, 2],
+        [2, 3],
+        [3, 1],
+        [3, 2],
+        [3, 3]
+      ];
+
+      // Update function to draw the grid and compute the next generation
+      function update() {
+        // Clear the canvas
+        ctx.fillStyle = WHITE;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw live cells
+        ctx.fillStyle = BLACK;
+        currentLiveCells.forEach(cell => {
+          // cell[0] is the row (y-coordinate), cell[1] is the column (x-coordinate)
+          const x = cell[1] * cellSize;
+          const y = cell[0] * cellSize;
+          ctx.fillRect(x, y, cellSize, cellSize);
+        });
+
+        // Compute the next generation using yj_calcGrid
+        currentLiveCells = yj_calcGrid(gridSize, currentLiveCells);
+      }
+
+      // Run the update function every 100ms (10 generations per second)
+      setInterval(update, 100);
+    };
+  </script>
+</body>
+</html>
