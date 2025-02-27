@@ -1,3 +1,9 @@
+/* Klotin function for the Game of Life.
+ * We keep the grid size fixed at runtime but allocated dynamically for better performance, bigger grid sizes and to change it dynamically during runtime
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2024, Yves Jeanrenaud
+ */
+
 fun yj_calcGrid(liveCells: Set<Pair<Int, Int>>): Set<Pair<Int, Int>> {
     val neighbourCounts = mutableMapOf<Pair<Int, Int>, Int>()
 
