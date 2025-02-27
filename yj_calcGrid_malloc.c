@@ -1,4 +1,9 @@
-//We keep the grid size fixed at runtime but allocated dynamically for better performance, bigger grid sizes and to change it dynamically during runtime
+/* C function for the Game of Life using malloc.
+ * We keep the grid size fixed at runtime but allocated dynamically for better performance, bigger grid sizes and to change it dynamically during runtime
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2024, Yves Jeanrenaud
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
