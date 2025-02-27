@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+##
+# bash function for the Game of Life.
+# https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+# 2024, Yves Jeanrenaud
+##
 
 # Initialise variables
 rows=5
