@@ -1,3 +1,10 @@
+#! /usr/bin/env python3
+##
+# python function for the Game of Life
+# https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+# 2025, Yves Jeanrenaud
+##
+
 def yj_calcGrid(size, initial_live_cells):
 """
 this function calculates the state of the next generation according to the rules™. It requires the Size of the grid to play on as a list and a list of cells that are currently alive
