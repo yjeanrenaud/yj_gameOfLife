@@ -1,3 +1,8 @@
+/* java function for the Game of Life.
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2024, Yves Jeanrenaud
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
