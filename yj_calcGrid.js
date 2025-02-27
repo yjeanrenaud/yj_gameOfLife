@@ -1,3 +1,8 @@
+/* javascript function for the Game of Life.
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2024, Yves Jeanrenaud
+ */
+
 function yj_calcGrid(rows, cols, initialGrid) {
     const directions = [
         [-1, -1], [-1, 0], [-1, 1],
