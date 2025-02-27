@@ -10,7 +10,7 @@ So far, there are the following languages supported here:
 - JavaScript: [yj_calcGrid.js](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.js)
 - MATHLAB: [yj_calcGrid.m](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.m)
 - PHP: [yj_calcGrid.php](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.php)
-- Python: [yj_calcGrid.py](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.py)
+- Python: [yj_calcGrid.py](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.py) with an example to execute: [gameOfLife-example.py](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/gameOfLife-example.py)
 - PowerShell: [yj_calcGrid.ps](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.ps)
 - Bash script: [yj_calcGrid.sh](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid.sh)
 - C: [yj_calcGrid.c](https://github.com/yjeanrenaud/yj_gameOfLife/blob/main/yj_calcGrid_malloc.c)
