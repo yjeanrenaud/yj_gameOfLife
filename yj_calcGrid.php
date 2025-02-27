@@ -1,4 +1,8 @@
 <?php
+/* php function for the Game of Life using malloc.
+ * https://github.com/yjeanrenaud/yj_gameOfLife/tree/main
+ * 2024, Yves Jeanrenaud
+ */
 
 function yj_calcGrid($rows, $cols, $initialGrid) {
     $nextGenGrid = array_fill(0, $rows, array_fill(0, $cols, 0));
