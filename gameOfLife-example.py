@@ -49,7 +49,7 @@ while running:
     pygame.display.flip()
     clock.tick(10)  # Set the frame rate (10 generations per second)
     
-    # Update the grid to the next generation using your function exactly as provided
+    # Update the grid to the next generation using the function
     current_live_cells = yj_calcGrid(grid_size, current_live_cells)
 
 pygame.quit()
